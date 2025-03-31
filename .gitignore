@@ -1,0 +1,63 @@
+gitignore_content = '''# Python bytecode files
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Python virtual environment directories
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+
+# IDE and editor files
+.vscode/
+.idea/
+*.swp
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints/
+
+# pytest cache directory
+.pytest_cache/
+
+# Python packaging
+*.egg-info/
+*.dist-info/
+*.eggs/
+dist/
+build/
+eggs/
+
+# Distribution / packaging
+*.tar.gz
+*.zip
+*.whl
+
+# Django stuff:
+*.log
+*.pot
+*.pyc
+__pycache__/
+db.sqlite3
+/static/
+
+# Flask stuff:
+instance/
+*.bak
+*.swp
+
+# macOS
+.DS_Store
+
+# Windows
+Thumbs.db
+ehthumbs.db
+'''
+
+# Create or overwrite the .gitignore file
+with open('.gitignore', 'w') as f:
+    f.write(gitignore_content)
+
+print(".gitignore file created successfully!")
