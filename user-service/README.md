@@ -12,6 +12,20 @@ The `user-service` is a Flask-based RESTful API for managing user data. It provi
 
 ## Project Structure
 
+```bash
+user-service/
+├── app.py                # Main application entry point
+├── config.py             # Configuration file for the application
+├── controllers/          # Contains route controllers
+│   └── user_controller.py
+├── models/               # Contains database models
+│   └── user.py
+├── repositories/         # Contains database interaction logic
+│   └── user_repository.py
+├── services/             # Contains business logic
+│   └── user_service.py
+└── __pycache__/          # Compiled Python files (ignored by .gitignore)
+```
 
 ## Prerequisites
 
@@ -39,32 +53,34 @@ The `user-service` is a Flask-based RESTful API for managing user data. It provi
 5. Access the API at http://127.0.0.1:5000.
 
 ## API Endpoints
-Users
-GET /users
-Retrieve all users.
 
-GET /users/<user_id>
-Retrieve a user by ID.
+### Users
 
-POST /users
-Create a new user.
-Request Body:
+- **GET** `/users`  
+  Retrieve all users.
 
-```bash
-{
-  "username": "example",
-  "email": "example@example.com"
-}
-```
-PUT /users/<user_id>
-Update an existing user.
-Request Body:
-```bash
-{
-  "username": "new_username",
-  "email": "new_email@example.com"
-}
-```
-DELETE /users/<user_id>
-Delete a user by ID.
+- **GET** `/users/<user_id>`  
+  Retrieve a user by ID.
 
+- **POST** `/users`  
+  Create a new user.  
+  **Request Body:**  
+  ```json
+  {
+    "username": "example",
+    "email": "example@example.com"
+  }
+  ```
+
+- **PUT** `/users/<user_id>`  
+  Update an existing user.  
+  **Request Body:**  
+  ```json
+  {
+    "username": "new_username",
+    "email": "new_email@example.com"
+  }
+  ```
+
+- **DELETE** `/users/<user_id>`  
+  Delete a user by ID.
