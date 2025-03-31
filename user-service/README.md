@@ -1,4 +1,3 @@
-# learn_python
 # User Service
 
 The `user-service` is a Flask-based RESTful API for managing user data. It provides endpoints for creating, reading, updating, and deleting user records.
